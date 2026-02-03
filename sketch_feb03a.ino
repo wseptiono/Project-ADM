@@ -5,8 +5,8 @@
 bool ledState = LOW;
 unsigned long previousMillis = 0;
 
-const unsigned long onTime  = 300; // LED nyala 1 detik
-const unsigned long offTime = 100;  // LED mati 0.25 detik
+const unsigned long onTime  = 300; // LED nyala 300  milidetik
+const unsigned long offTime = 100;  // LED mati 100  milidetik
 
 void setup() {
   pinMode(IR_PIN, INPUT);        // pakai pull-up eksternal 10k ke 5V
@@ -54,3 +54,4 @@ void loop() {
     ledState = LOW;
   }
 }
+
