@@ -1,0 +1,19 @@
+#include <SoftwareSerial.h>
+#include <DFRobotDFPlayerMini.h>
+
+SoftwareSerial dfSerial(10, 11);
+DFRobotDFPlayerMini df;
+
+void setup() {
+  dfSerial.begin(9600);
+
+  if (!df.begin(dfSerial)) {
+    // Kalau berhenti di sini → RX/TX masih salah
+    while (1);
+  }
+
+  df.volume(25);
+  df.play(1);  // harus bunyi
+}
+
+void loop() {}
